@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    #video-container {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    video {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #4682b4;
+    }
+  </style>
+</head>
+<body>
+  <div id="button-container">
+    <button onclick="showVideo()">Surpresa</button>
+  </div>
+  <div id="video-container">
+    <video controls>
+      <source src="VIDEO.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+  <script>
+    function showVideo() {
+      document.getElementById('button-container').style.display = 'none';
+      document.getElementById('video-container').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
